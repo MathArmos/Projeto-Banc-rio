@@ -31,8 +31,7 @@ while True:
 
     elif opcao == "2":
         valor = float(input("Informe o valor de saque: "))
-        print(f"Você sacou {valor:.2f}. Deseja realizar outra operação?")
-
+        
         excedeu_saldo = valor > saldo
 
         excedeu_limite = valor > limite
@@ -52,7 +51,7 @@ while True:
             saldo -= valor
             extrato += f"Saque: R$ {valor:.2f}\n"
             numero_saques += 1
-
+            print(f"Você sacou {valor:.2f}. Deseja realizar outra operação?")
         else:
             print("Operação falhou! O valor informado é inválido.")
 
